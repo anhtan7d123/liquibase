@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+
+  application:
+    name: Liquibase
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/liquibase
+    username: postgres
+    password: 05042001aA
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+
+    show-sql: false
+    open-in-view: true
