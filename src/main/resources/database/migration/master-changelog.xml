@@ -1,16 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <changeSet id="1" author="tan">
-        <createTable tableName="student">
-            <column name="id" type="BIGINT" autoIncrement="true">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="name" type="VARCHAR(200)" />
-            <column name="age" type="BIGINT" />
-        </createTable>
-    </changeSet>
+    <include file="/changelog/db-changelogv1.xml" relativeToChangelogFile="true"/>
+    <include file="/changelog/db-changelogv2.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
